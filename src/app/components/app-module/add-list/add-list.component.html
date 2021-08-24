@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="form-container">
+    <h2>Add list</h2>
+    <form [formGroup]="form" (ngSubmit)="onsubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>List</mat-label>
+        <input matInput [formControlName]="'title'">
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">{{isedit ? 'edit list' : 'add list'}}</button>
+    </form>
+  </div>
+</div>

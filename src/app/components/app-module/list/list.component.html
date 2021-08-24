@@ -1,0 +1,51 @@
+<div class="container">
+
+  <div class="list-container">
+    <div class="header">
+      <h2>Lists</h2>
+      <h2>Tasks</h2>
+    </div>
+    <mat-tab-group mat-align-tabs="start" *ngIf="service1.alllista.length > 0">
+      <mat-tab
+        *ngFor="let list of service1.alllista">
+        <ng-template mat-tab-label>
+          <div class="list-label">
+            <p>{{list.title}}</p>
+            <div class="btn-wrapper">
+              <button type="button" mat-icon-button [color]="'primary'" (click)="addtask(list._id)" [matTooltip]="'add new task'">
+                <mat-icon>add_circle</mat-icon>
+              </button>
+              <button type="button" mat-icon-button [color]="'accent'" (click)="editlist(list._id)" [matTooltip]="'edit list'">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button type="button" mat-icon-button [color]="'warn'" (click)="deletelist(list._id)" [matTooltip]="'delete list'">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </ng-template>
+        <div class="task-wrapper"
+             *ngFor="let task of list.tasks">
+          <p>{{task.title}}</p>
+          <div class="btn-wrapper">
+            <button type="button" mat-icon-button [color]="'accent'" (click)="edittask(task._id)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button type="button" mat-icon-button [color]="'warn'" (click)="deletetask(task._id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+    <div class="btn-wrapper">
+      <button type="button" mat-raised-button [color]="'primary'" [routerLink]="['/', 'add-list']">Add list</button>
+
+    </div>
+
+  </div>
+
+</div>
+
+

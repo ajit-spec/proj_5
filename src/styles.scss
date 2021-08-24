@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-tab-group {
+  flex-direction: row !important;
+  align-items: baseline !important;
+
+  .mat-tab-header {
+    min-width: 40%;
+  }
+
+  .mat-tab-body-wrapper {
+    flex: 1;
+    margin-left: 2rem;
+  }
+
+  .mat-tab-labels {
+    flex-direction: column;
+
+    .mat-tab-label-active {
+      border-right: 2px solid #EB3349;
+    }
+
+    .mat-tab-label {
+      justify-content: flex-start;
+      text-align: left;
+      padding: 0;
+
+      .mat-tab-label-content {
+        width: 100%;
+
+        .list-label {
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .mat-ink-bar {
+    background-color: transparent !important;
+  }
+}

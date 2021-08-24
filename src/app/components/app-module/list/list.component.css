@@ -1,0 +1,52 @@
+.container {
+  background: #EB3349;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F45C43, #EB3349);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F45C43, #EB3349);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .list-container {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 70%;
+  margin: auto;
+}
+.container .list-container .list-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.container .list-container .list-label p {
+  margin: 0;
+}
+.container .list-container .list-label .btn-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+.container .list-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .list-container .task-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.container .list-container .task-wrapper .btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+.container .btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=list.component.css.map */
